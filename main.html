@@ -1,0 +1,89 @@
+dishes = [
+    {
+        "name": "Борщ",
+        "rating": 9,
+        "recipe": "https://www.russianfood.com/recipes/recipe.php?rid=107392",
+        "image": "https://www.russianfood.com/dycontent/images_upl/64/big_63397.jpg"
+    },
+    {
+        "name": "Пельмени",
+        "rating": 8,
+        "recipe": "https://www.russianfood.com/recipes/recipe.php?rid=124988",
+        "image": "https://www.russianfood.com/dycontent/images_upl/53/big_52940.jpg"
+    },
+    {
+        "name": "Оливье салат",
+        "rating": 7,
+        "recipe": "https://www.russianfood.com/recipes/recipe.php?rid=160011",
+        "image": "https://www.russianfood.com/dycontent/images_upl/474/sm_473078.jpg"
+    },
+    {
+        "name": "Окрошка",
+        "rating": 6,
+        "recipe": "https://www.russianfood.com/recipes/recipe.php?rid=167578",
+        "image": "https://www.russianfood.com/dycontent/images_upl/606/sm_605582.jpg"
+    },
+    {
+        "name": "Холодец",
+        "rating": 5,
+        "recipe": "https://www.russianfood.com/recipes/recipe.php?rid=144298",
+        "image": "https://www.russianfood.com/dycontent/images_upl/236/sm_235392.jpg"
+    }
+]
+html_template = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Первый сайт</title>
+</head>
+<body>
+    <style>
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+        }}
+        th, td {{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }}
+        th {{
+            background-color: #f2f2f2;
+        }}
+        img {{
+            max-width: 100px;
+            max-height: 100px;
+        }}
+    </style>
+</head>
+<body>
+    <h2>Favorite/Least Favorite Dishes</h2>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>rating</th>
+            <th>recipe</th>
+            <th>image</th>
+        </tr>
+        {rows}
+    </table>
+</body>
+</html>
+"""
+# Generating table rows from dishes data
+rows = ""
+for dish in dishes:
+    row = f"""
+        <tr>
+
+            <td>{dish['name']}</td>
+            <td>{dish['rating']}</td>
+            <td><a href="{dish['recipe']}">Ссылка</a></td>
+            <td><img src="{dish['image']}" alt="{dish['name']}"></td>
+        </tr>
+    """
+    rows += row
+
+# Complete HTML
+html_content = html_template.format(rows=rows)
