@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="VD02_main.css">
+</head>
+<body>
+<div class="card">
+     <div class = "image">
+        <img src="image/person1.jpg" width="200" height="200">
+    </div>
+    <div class = "name">
+        <h1>Даниил Иванов</h1>
+    </div>
+    <div class = "email">
+        <h1>daniil.ivanov@example.com</h1>
+    </div>
+    <div class = "dob">
+        <h1>1990-05-15</h1>
+    </div>
+    <div class = "city">
+        <h1>Москва</h1>
+    </div>
+</div>
+<div class="card">
+    <div class = "image">
+        <img src="image/person2.jpg" width="200" height="200">
+    </div>
+    <div class = "name">
+        <h1>Анна Смирнова</h1>
+    </div>
+    <div class = "email">
+        <h1>anna.smirnova@example.com</h1>
+    </div>
+    <div class = "dob">
+        <h1>1988-09-23</h1>
+    </div>
+    <div class = "city">
+        <h1>Санкт-Петербург</h1>
+    </div>
+</div>
+<div class="card">
+    <div class = "image">
+        <img src="image/person3.jpg" width="200" height="200">
+    </div>
+    <div class = "name">
+        <h1>Иван Петров</h1>
+    </div>
+    <div class = "email">
+        <h1>ivan.petrov@example.com</h1>
+    </div>
+    <div class = "dob">
+        <h1>1995-02-10</h1>
+    </div>
+    <div class = "city">
+        <h1>Новосибирск</h1>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
+
+<!--users = [-->
+<!--    {-->
+<!--        "name": "Даниил Иванов",-->
+<!--        "email": "daniil.ivanov@example.com",-->
+<!--        "dob": "1990-05-15",-->
+<!--        "city": "Москва",-->
+<!--        "image": "https://example.com/daniil.jpg"-->
+<!--    },-->
+<!--    {-->
+<!--        "name": "Анна Смирнова",-->
+<!--        "email": "anna.smirnova@example.com",-->
+<!--        "dob": "1988-09-23",-->
+<!--        "city": "Санкт-Петербург",-->
+<!--        "image": "https://example.com/anna.jpg"-->
+<!--    },-->
+<!--    {-->
+<!--        "name": "Иван Петров",-->
+<!--        "email": "ivan.petrov@example.com",-->
+<!--        "dob": "1995-02-10",-->
+<!--        "city": "Новосибирск",-->
+<!--        "image": "https://example.com/ivan.jpg"-->
+<!--    }-->
+<!--]-->
+
+<!--# HTML template for user cards-->
+<!--html_template = """-->
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>User Information Cards</title>-->
+<!--    <style>-->
+<!--        .card-container {{-->
+<!--            display: flex;-->
+<!--            flex-wrap: wrap;-->
+<!--            gap: 20px;-->
+<!--        }}-->
+<!--        .card {{-->
+<!--            border: 1px solid #ccc;-->
+<!--            border-radius: 10px;-->
+<!--            padding: 20px;-->
+<!--            width: 200px;-->
+<!--            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);-->
+<!--            transition: transform 0.2s, box-shadow 0.2s;-->
+<!--        }}-->
+<!--        .card:hover {{-->
+<!--            transform: scale(1.05);-->
+<!--            box-shadow: 2px 2px 12px rgba(0,0,0,0.3);-->
+<!--        }}-->
+<!--        .card img {{-->
+<!--            border-radius: 50%;-->
+<!--            width: 100px;-->
+<!--            height: 100px;-->
+<!--            object-fit: cover;-->
+<!--        }}-->
+<!--        .card h3 {{-->
+<!--            margin: 10px 0;-->
+<!--        }}-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h2>User Information Cards</h2>-->
+<!--    <div class="card-container">-->
+<!--        {cards}-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+<!--"""-->
+
+<!--# Generating cards from users data-->
+<!--cards = ""-->
+<!--for user in users:-->
+<!--    card = f"""-->
+<!--        <div class="card">-->
+<!--            <img src="{user['image']}" alt="{user['name']}">-->
+<!--            <h3>{user['name']}</h3>-->
+<!--            <p>Email: {user['email']}</p>-->
+<!--            <p>Date of Birth: {user['dob']}</p>-->
+<!--            <p>City: {user['city']}</p>-->
+<!--        </div>-->
+<!--    """-->
+<!--    cards += card-->
+
+<!--# Complete HTML-->
+<!--html_content = html_template.format(cards=cards)-->
+
+<!--# Saving the HTML content to a file-->
+<!--file_path = '/mnt/data/user_cards.html'-->
+<!--with open(file_path, 'w') as file:-->
+<!--    file.write(html_content)-->
+
+<!--file_path-->
