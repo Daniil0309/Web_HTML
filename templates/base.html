@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/templates/about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Ваш сайт. Все права защищены.</p>
+        <p>Контакты: info@вашсайт.ru | +7 (123) 456-7890</p>
+        <p>Адрес: ул. Примерная, 123, г. Примеры, Россия</p>
+    </footer>
+</body>
+</html>
